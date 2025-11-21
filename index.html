@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>منتجات - Shopping Cart</title>
+    <style>
+        /* أنماط CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-content a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+        
+        .products-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .products-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .products-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .products-item-content {
+            padding: 1.5rem;
+        }
+        
+        .products-item-content h2 {
+            color: #6a11cb;
+            margin-bottom: 0.5rem;
+        }
+        
+        .products-item-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .products-item-content span {
+            display: inline-block;
+            background: #f0f4f8;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+        
+        .products-item-actions {
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 0.5rem;
+            }
+            
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html">Shopping Cart</a>
+                <nav>
+                    <ul>
+                        <li><a href="login.html" class="brand">تسجيل الدخول</a></li>
+                        <li><a href="register.html">إنشاء حساب</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+       <div class="container">
+            <div class="products">
+                <div class="products-item">
+                    <!-- استبدلت المسار بصورة من الإنترنت لتجنب مشاكل المسار -->
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="منتج للبيع" class="products-item-image" />
+                    <div class="products-item-content">
+                        <h2>منتج للبيع</h2>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                        <span>الحجم: كبير</span>
+                    </div>
+                    <div class="products-item-actions">
+                        <button class="btn btn-primary">إضافة إلى السلة</button>
+                        <button class="btn btn-secondary">التفاصيل</button>
+                    </div>
+                </div>
+                
+                <!-- منتج إضافي كمثال -->
+                <div class="products-item">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="منتج اخر" class="products-item-image" />
+                    <div class="products-item-content">
+                        <h2>منتج آخر</h2>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                        <span>الحجم: متوسط</span>
+                    </div>
+                    <div class="products-item-actions">
+                        <button class="btn btn-primary">إضافة إلى السلة</button>
+                        <button class="btn btn-secondary">التفاصيل</button>
+                    </div>
+                </div>
+                
+                <!-- منتج إضافي كمثال -->
+                <div class="products-item">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                         alt="منتج ثالث" class="products-item-image" />
+                    <div class="products-item-content">
+                        <h2>منتج جديد</h2>
+                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى</p>
+                        <span>الحجم: صغير</span>
+                    </div>
+                    <div class="products-item-actions">
+                        <button class="btn btn-primary">إضافة إلى السلة</button>
+                        <button class="btn btn-secondary">التفاصيل</button>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </section>
+
+    <script>
+        // كود JavaScript بسيط للتفاعل مع الأزرار
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.btn-primary');
+            const detailsButtons = document.querySelectorAll('.btn-secondary');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.closest('.products-item').querySelector('h2').textContent;
+                    alert(`تم إضافة ${productName} إلى سلة التسوق!`);
+                });
+            });
+            
+            detailsButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.closest('.products-item').querySelector('h2').textContent;
+                    alert(`عرض تفاصيل ${productName}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

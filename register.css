@@ -1,0 +1,282 @@
+/* أنماط خاصة بصفحة التسجيل */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 180px);
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.section-form {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    color: #4a6cf7;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #718096;
+    font-size: 16px;
+}
+
+.register-form {
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
+    outline: none;
+}
+
+.error-message {
+    display: block;
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.terms-group input {
+    margin-right: 10px;
+}
+
+.terms-group label {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.terms-group a {
+    color: #4a6cf7;
+    text-decoration: none;
+}
+
+.terms-group a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #4a6cf7, #6a11cb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(74, 108, 247, 0.3);
+}
+
+.submit-btn i {
+    margin-right: 8px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link p {
+    color: #718096;
+}
+
+.login-link a {
+    color: #4a6cf7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-login p {
+    color: #718096;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn {
+    color: #db4437;
+}
+
+.google-btn:hover {
+    background: #feeeeb;
+}
+
+.facebook-btn {
+    color: #4267B2;
+}
+
+.facebook-btn:hover {
+    background: #ebf0fa;
+}
+
+.social-btn i {
+    margin-right: 8px;
+}
+
+.form-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-overlay h3 {
+    color: #4a6cf7;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.image-overlay p {
+    color: #718096;
+    font-size: 14px;
+}
+
+footer {
+    background: #4a6cf7;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+/* أنماط للاستجابة على الشاشات الصغيرة */
+@media (max-width: 968px) {
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .section-form {
+        max-width: 100%;
+    }
+    
+    .form-image {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .form-header h2 {
+        font-size: 24px;
+    }
+    
+    .input-group input {
+        padding: 12px 12px 12px 40px;
+    }
+}

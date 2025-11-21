@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shopping Cart - Register</title>
+    <link rel="stylesheet" href="my_project/css/style.css"/>
+    <link rel="stylesheet" href="my_project/css/register.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-shopping-cart"></i> Shopping Cart
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="login.html" class="brand"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+                        <li><a href="register.html" class="active"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-container">
+        <section class="section-form">
+            <div class="form-header">
+                <h2>Create Your Account</h2>
+                <p>Join us to start your shopping journey</p>
+            </div>
+            
+            <form class="register-form" novalidate>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Enter your full name" id="fullname" required />
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" id="email" required />
+                    <span class="error-message" id="email-error"></span>
+                </div>-
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Create a password" id="password" required />
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm your password" id="confirm-password" required />
+                    <span class="error-message" id="confirm-error"></span>
+                </div>
+                
+                <div class="terms-group">
+                    <input type="checkbox" id="terms" />
+                    <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+                
+                <div class="login-link">
+                    <p>Already have an account? <a href="login.html">Sign In here</a></p>
+                </div>
+            </form>
+            
+            <div class="social-login">
+                <p>Or sign up with</p>
+                <div class="social-buttons">
+                    <button class="social-btn google-btn">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button class="social-btn facebook-btn">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="form-image">
+            <img src="https://cdn.pixabay.com/photo/2018/02/28/21/57/shopping-cart-3188590_1280.png" alt="Shopping Illustration" />
+            <div class="image-overlay">
+                <h3>Start Shopping Today!</h3>
+                <p>Join thousands of satisfied customers</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Shopping Cart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>تسجيل مستخدم جديد - Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html">Shopping Cart</a>
+                <nav>
+                    <ul>
+                        <li><a href="login.html" class="brand">sign in</a></li>
+                        <li><a href="register.html">sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-form">
+        <h2>sign in</h2>
+        <form novalidate>
+            <input type="text" placeholder="username..." id="username" required />
+            <input type="email" placeholder="email..." id="email" required />
+            <input type="password" placeholder="password..." id="password" required />
+            <button type="submit">إنشاء حساب</button>
+        </form>
+        <div class="login-link">
+            <p>هل لديك حساب already? <a href="login.html">sign in</a></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
